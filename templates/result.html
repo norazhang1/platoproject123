@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Emotion Detected</h1>
+    <p><strong>Input:</strong> {{ text }}</p>
+    <p><strong>Emotion:</strong> {{ emotion }}</p>
+    <p><strong>Confidence:</strong> {{ score }}</p>
+
+    <img src="{{ url_for('static', filename='images/' + emotion + '.jpg') }}" class="emotion-image" alt="{{ emotion }}">
+
+    <div class="advice-box">
+        <h2>Wellness Advice</h2>
+        <p>{{ advice }}</p>
+    </div>
+
+    <a href="/">Try another</a>
+</body>
+</html>
