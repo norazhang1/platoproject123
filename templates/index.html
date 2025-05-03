@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+    <form action="/detect" method="post">
+        <input type="text" name="text" placeholder="Type a sentence..." required>
+        <button type="submit">Analyze Emotion</button>
+    </form>
+</body>
+</html>
